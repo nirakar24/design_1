@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,700&display=swap');
+
+@font-face {
+    font-family: "Game";
+    src: url("./font/ghostclan.ttf");
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #2D2E35;
+    color: aliceblue;
+    height: 100%;
+    width: 100%;
+}
+
+.lines{
+    left: 17vw;
+    position: fixed;
+    display: flex;
+    gap: .5vw;
+    z-index: 0;
+}
+
+.yellow_line{
+    width: 0.8vw;
+    height: 100vw;
+    background-color: yellow;
+}
+.greyline{
+    width: 0.8vw;
+    height: 100vw;
+    background-color: rgb(112, 112, 101);
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    width: 95vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 8vw;
+    font-size: 1vw;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar li{
+    padding: 2vw;
+}
+
+a{
+    color: aliceblue;
+}
+
+.hero_sect{
+    margin-top: 2vw;
+    display: flex;
+    gap: 6vw;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 8vw;
+    /* background: url("./video/intro_vid.mp4"); */
+}
+
+.image_container{
+    width: 45vw;
+    height: 45vw;
+    /* background-color: red; */
+    z-index: 2;
+}
+
+.image_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: solid 1px white; */
+}
+
+.hero_text{
+    width: 60vw;
+    height: 20vw;
+    font-size: 3.5vw;
+    /* background-color: blue; */
+}
+
+.hero_text h2{
+    font-weight: 300;
+}
+
+.slide{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0vw 6vw;
+    z-index: 2;
+}
+
+.features{
+    display: flex;
+    gap: 2vw;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.video_container{
+    border-radius: 1vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 15vw;
+    background-color: rgb(24, 23, 23);
+    /* box-shadow: 0 0 20px rgba(121, 117, 117, 0.686); */
+    border: solid 2px orange;
+
+}
+
+.video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+    /* z-index: 9999; */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.video_container:hover .text{
+    opacity: 0;
+}
+
+.video_container:hover .video{
+    opacity: 1;
+    /* scale: 1.1; */
+    transition: 1s;
+}
+
+.text{
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vw;
+    font-size: 1.7vw;
+    /* background-color: yellow; */
+    width: 70%;
+    transition: opacity 0.5s;
+    height: 70%;
+}
+
+.text h2{
+    font-weight: 400;
+}
+
+.text p{
+    font-weight: 200;
+    font-size: 1vw;
+}
+
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Game";
+    width: 100%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 9999;
+}
+
+.overlay h2{
+    font-family: "Game";
+    padding-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.overlay h1{
+    font-family: "Game";
+    padding-top: 2rem;
+    font-size: 3rem;
+}
